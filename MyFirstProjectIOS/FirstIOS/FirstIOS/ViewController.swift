@@ -9,15 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var lable = UILabel()
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   // private let lable: UILabel = {
+     //  let lable = UILabel()
         
-        self.view.backgroundColor = UIColor.blue
+        //label2
+       // lable.text = "dgfbsdgfbasgf"
+        //return lable
+    //}()
+    override func viewDidLoad() {
+     
+        let label = UILabel(frame: CGRect(x: 60.0, y: 80.0, width: 150, height: 150))
+        label.center = self.view.center
+        label.text = "LABEL"
+        label.textColor = UIColor.blue
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.green
+        self.view.addSubview(label)
+        //self.viewDidLoad(label)
+       // self.view.backgroundColor = UIColor.blue
         
         // Do any additional setup after loading the view.
     }
 
-
+//    private func setupLayot() {
+//        view.addSubview(lable)
+//
+//
+//    }
 }
 
