@@ -24,9 +24,15 @@ class ViewController: UIViewController {
         label.textColor = UIColor.blue
         label.textAlignment = .center
         label.backgroundColor = UIColor.green
+        label.numberOfLines = 5
+        label.lineBreakMode = .byCharWrapping
+        label.layer.cornerRadius = 75
+        label.clipsToBounds = true
+        
+        
         self.view.addSubview(label)
         //self.viewDidLoad(label)
-       // self.view.backgroundColor = UIColor.blue
+       self.view.backgroundColor = UIColor.blue
         
         // Do any additional setup after loading the view.
     }
