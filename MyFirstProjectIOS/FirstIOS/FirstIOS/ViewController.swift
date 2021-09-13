@@ -28,15 +28,21 @@ class ViewController: UIViewController {
         label.lineBreakMode = .byCharWrapping
         label.layer.cornerRadius = 75
         label.clipsToBounds = true
-        
-        
         self.view.addSubview(label)
+        let str = "This is Label This is Label"
+        print(widthOfString(font: UIFont.systemFont(ofSize: 22), text: str))
+        
+        
         //self.viewDidLoad(label)
        self.view.backgroundColor = UIColor.blue
         
         // Do any additional setup after loading the view.
     }
-
+    func widthOfString (font:UIFont, text:String) -> CGFloat{
+        let attr = [NSAttributedString.Key.font:font]
+        let size = (text as NSString).size(withAttributes: attr)
+        return size.width
+    }
 //    private func setupLayot() {
 //        view.addSubview(lable)
 //
