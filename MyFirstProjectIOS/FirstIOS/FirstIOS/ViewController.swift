@@ -101,7 +101,7 @@ var label = UILabel()
             let action = UIAlertAction(title: "OK", style: .default) {(action) in
             let text1 = aletController.textFields?.first
                 let text2 = aletController.textFields?[1]
-                self.label.text! +=  String(Int(text1?.text ?? "")! + Int(text2?.text ?? "")!)
+                self.label.text! +=  "The sum of the numbers" + String(Int(text1?.text ?? "")! + Int(text2?.text ?? "")!)
                 }
             
             aletController.addAction(action)
