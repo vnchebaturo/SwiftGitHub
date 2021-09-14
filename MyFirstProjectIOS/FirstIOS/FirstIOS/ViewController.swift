@@ -13,10 +13,9 @@ var label = UILabel()
     var button2 = UIButton()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-       // view.addSubview(button)
-        //showButton()
+     
+        fioButton()
         view.backgroundColor = .white
         drawLabel(newLabel: label, newTextLabel: "Мое первое мини приложение", x: 0, y: 0, width: Double(UIScreen.main.bounds.width), height: 30, color: .clear, textAligment: .center)
         label.center = CGPoint(x: view.center.x, y: 150)
@@ -69,5 +68,22 @@ var label = UILabel()
        aletController.addAction(action)
        self.present(aletController, animated: true, completion: nil)
    }
+    @objc func fioButton () {
+        self.alert(title: "Пожалуйста", message: "Введите ФИО", style: .alert)
+   }
+    
+    func  alert (title: String, message: String, style: UIAlertController.Style){
+        let aletController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+    //let fio = UIA = UIApplication.
+    let action = UIAlertAction(title: "OK", style: .default) {(action) in
+        let text1 = aletController.textFields?.first
+        self.label.text = (text1?.text!)
+    }
+        aletController.addTextField {(textField) in
+        }
+   aletController.addAction(action)
+   self.present(aletController, animated: true, completion: nil)
+    }
 }
 
