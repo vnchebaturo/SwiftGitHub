@@ -14,13 +14,12 @@ var label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+// MARK: -Output to the screen
         fioButton()
         view.backgroundColor = .white
         drawLabel(newLabel: label, newTextLabel: "Мое первое мини приложение", x: 0, y: 0, width: Double(UIScreen.main.bounds.width), height: 30, color: .clear, textAligment: .center)
         label.center = CGPoint(x: view.center.x, y: 150)
-        // MARK: -Archor
-       // label.rightAnchor
+       
         self.view.addSubview(label)
         additionButton(button: button, x: 30, y: 200, width: 100, height: 100, color: .brown)
         guessTheNumber(button: button2, x: 150, y: 200, width: 100, height: 100, color: .yellow)
@@ -44,7 +43,7 @@ var label = UILabel()
         button.frame = CGRect(x: x, y: y, width: width, height: height)
         button.backgroundColor = color
         button.setTitle("сложение", for: .normal)
-        button.addTarget(self, action: #selector(showButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(summButton), for: .touchUpInside)
         button.layer.cornerRadius = 50.0
         }
     func guessTheNumber (button: UIButton, x: Double, y: Double, width: Double, height: Double, color: UIColor) {
@@ -64,26 +63,50 @@ var label = UILabel()
        let aletController = UIAlertController(title: "Error", message: "NONONO", preferredStyle: .alert)
        let action = UIAlertAction(title: "OK", style: .default) {(action) in
        }
-       //aletController.addTextField(configurationHandler: nil)
+       
        aletController.addAction(action)
        self.present(aletController, animated: true, completion: nil)
    }
-    @objc func fioButton () {
+// MARK: -FIO
+    
+@objc func fioButton () {
         self.alert(title: "Пожалуйста", message: "Введите ФИО", style: .alert)
    }
     
     func  alert (title: String, message: String, style: UIAlertController.Style){
         let aletController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-    //let fio = UIA = UIApplication.
-    let action = UIAlertAction(title: "OK", style: .default) {(action) in
+        let action = UIAlertAction(title: "OK", style: .default) {(action) in
         let text1 = aletController.textFields?.first
-        self.label.text = (text1?.text!)
-    }
+        self.label.text = ("Привет \(String(text1?.text ?? "0")) сложи числа! ")
+            }
         aletController.addTextField {(textField) in
-        }
-   aletController.addAction(action)
-   self.present(aletController, animated: true, completion: nil)
+            }
+        aletController.addAction(action)
+        self.present(aletController, animated: true, completion: nil)
     }
+// MARK: - SUMM
+    @objc func summButton () {
+            self.summ(title: "Пожалуйста", message: "Введите два числа", style: .alert)
+       }
+        
+        func  summ (title: String, message: String, style: UIAlertController.Style){
+            let aletController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            aletController.addTextField(configurationHandler: nil)
+//            {(textField) in
+//                }
+            aletController.addTextField(configurationHandler: nil)
+//            {(textField) in
+//                }
+            let action = UIAlertAction(title: "OK", style: .default) {(action) in
+            let text1 = aletController.textFields?.first
+                let text2 = aletController.textFields?[1]
+                self.label.text! +=  String(Int(text1?.text ?? "")! + Int(text2?.text ?? "")!)
+                }
+            
+            aletController.addAction(action)
+            self.present(aletController, animated: true, completion: nil)
+        }
 }
+
 
