@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 var label = UILabel()
     var button = UIButton()
+    var button2 = UIButton()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -22,18 +24,13 @@ var label = UILabel()
        // label.rightAnchor
         self.view.addSubview(label)
         additionButton(button: button, x: 30, y: 200, width: 100, height: 100, color: .brown)
+        guessTheNumber(button: button2, x: 150, y: 200, width: 100, height: 100, color: .yellow)
         
         self.view.addSubview(button)
+        self.view.addSubview(button2)
 //
   }
-     @objc func showButton () {
-        let aletController = UIAlertController(title: "Error", message: "NONONO", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) {(action) in
-        }
-        //aletController.addTextField(configurationHandler: nil)
-        aletController.addAction(action)
-        self.present(aletController, animated: true, completion: nil)
-    }
+    
     
     func drawLabel(newLabel: UILabel, newTextLabel: String, x: Double, y: Double, width: Double, height: Double, color: UIColor, textAligment: NSTextAlignment) {
             newLabel.frame = CGRect(x: x, y: y, width: width, height: height)
@@ -51,6 +48,26 @@ var label = UILabel()
         button.addTarget(self, action: #selector(showButton), for: .touchUpInside)
         button.layer.cornerRadius = 50.0
         }
+    func guessTheNumber (button: UIButton, x: Double, y: Double, width: Double, height: Double, color: UIColor) {
+        button.frame = CGRect(x: x, y: y, width: width, height: height)
+        button.backgroundColor = color
+       
+        button.setTitle("угадай число", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+
+        
+        button.addTarget(self, action: #selector(showButton), for: .touchUpInside)
+        button.layer.cornerRadius = 50.0
+        }
     
+    @objc func showButton () {
+       let aletController = UIAlertController(title: "Error", message: "NONONO", preferredStyle: .alert)
+       let action = UIAlertAction(title: "OK", style: .default) {(action) in
+       }
+       //aletController.addTextField(configurationHandler: nil)
+       aletController.addAction(action)
+       self.present(aletController, animated: true, completion: nil)
+   }
 }
 
