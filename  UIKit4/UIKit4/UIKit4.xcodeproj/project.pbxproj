@@ -11,7 +11,7 @@
 		45054FF126F2254D003777C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45054FF026F2254D003777C4 /* SceneDelegate.swift */; };
 		45054FF326F2254D003777C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45054FF226F2254D003777C4 /* ViewController.swift */; };
 		45054FF826F2254E003777C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45054FF726F2254E003777C4 /* Assets.xcassets */; };
-		4505500326F22E64003777C4 /* ViewControllerAutorizetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505500226F22E64003777C4 /* ViewControllerAutorizetion.swift */; };
+		4505500526F23D3D003777C4 /* FierstString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505500426F23D3D003777C4 /* FierstString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		45054FF226F2254D003777C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45054FF726F2254E003777C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45054FFC26F2254E003777C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4505500226F22E64003777C4 /* ViewControllerAutorizetion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAutorizetion.swift; sourceTree = "<group>"; };
+		4505500426F23D3D003777C4 /* FierstString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FierstString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +57,9 @@
 				45054FEE26F2254D003777C4 /* AppDelegate.swift */,
 				45054FF026F2254D003777C4 /* SceneDelegate.swift */,
 				45054FF226F2254D003777C4 /* ViewController.swift */,
+				4505500426F23D3D003777C4 /* FierstString.swift */,
 				45054FF726F2254E003777C4 /* Assets.xcassets */,
 				45054FFC26F2254E003777C4 /* Info.plist */,
-				4505500226F22E64003777C4 /* ViewControllerAutorizetion.swift */,
 			);
 			path = UIKit4;
 			sourceTree = "<group>";
@@ -133,8 +133,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45054FF326F2254D003777C4 /* ViewController.swift in Sources */,
+				4505500526F23D3D003777C4 /* FierstString.swift in Sources */,
 				45054FEF26F2254D003777C4 /* AppDelegate.swift in Sources */,
-				4505500326F22E64003777C4 /* ViewControllerAutorizetion.swift in Sources */,
 				45054FF126F2254D003777C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
