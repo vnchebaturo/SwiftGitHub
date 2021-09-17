@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4516FEE026F4D85B00A06E67 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		45B0E13E26F4703D008E9CA8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +64,7 @@
 		45B0E14926F4703D008E9CA8 /* katAndKard */ = {
 			isa = PBXGroup;
 			children = (
-				45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */,
+				4516FEE026F4D85B00A06E67 /* SupportFiles */,
 				45B0E14C26F4703D008E9CA8 /* SceneDelegate.swift */,
 				45B0E14E26F4703D008E9CA8 /* ViewController.swift */,
 				45B0E15026F4703D008E9CA8 /* Main.storyboard */,

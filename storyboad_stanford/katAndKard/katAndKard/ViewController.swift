@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         flipCount += 1
         if let cardNumber = cardButtons.firstIndex(of: sender) {
                 flipCard (withEmoji: emojiChoices[cardNumber], on: sender)
+            print("12431 ")
                 } else {
                     print("12431 ")
                 }
