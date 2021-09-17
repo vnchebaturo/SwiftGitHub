@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278E9CB726F45D5500F47131 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E9CB626F45D5500F47131 /* Concentration.swift */; };
+		278E9CB926F460D900F47131 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E9CB826F460D900F47131 /* Card.swift */; };
 		45B0E14D26F4703D008E9CA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0E14C26F4703D008E9CA8 /* SceneDelegate.swift */; };
 		45B0E14F26F4703D008E9CA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0E14E26F4703D008E9CA8 /* ViewController.swift */; };
 		45B0E15226F4703D008E9CA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B0E15026F4703D008E9CA8 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		278E9CB626F45D5500F47131 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		278E9CB826F460D900F47131 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		45B0E14726F4703D008E9CA8 /* katAndKard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = katAndKard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45B0E14C26F4703D008E9CA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				45B0E15326F4703D008E9CA8 /* Assets.xcassets */,
 				45B0E15526F4703D008E9CA8 /* LaunchScreen.storyboard */,
 				45B0E15826F4703D008E9CA8 /* Info.plist */,
+				278E9CB626F45D5500F47131 /* Concentration.swift */,
+				278E9CB826F460D900F47131 /* Card.swift */,
 			);
 			path = katAndKard;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACAE4D1226F4DDE8001FD641 /* AppDelegate.swift in Sources */,
+				278E9CB726F45D5500F47131 /* Concentration.swift in Sources */,
+				278E9CB926F460D900F47131 /* Card.swift in Sources */,
 				45B0E14F26F4703D008E9CA8 /* ViewController.swift in Sources */,
 				45B0E14D26F4703D008E9CA8 /* SceneDelegate.swift in Sources */,
 			);
