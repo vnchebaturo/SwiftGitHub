@@ -10,6 +10,9 @@ import UIKit
 
 class RegistrationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
+    customView = MyCustomView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+    self.view.addSubview(customView)
+
     var tableView = UITableView()
     var tableData = ["Beach", "Clubs", "Chill", "Dance"]
     override func viewDidLoad() {
