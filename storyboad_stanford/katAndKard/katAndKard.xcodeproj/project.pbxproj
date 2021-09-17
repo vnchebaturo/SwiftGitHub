@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45B0E14B26F4703D008E9CA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */; };
 		45B0E14D26F4703D008E9CA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0E14C26F4703D008E9CA8 /* SceneDelegate.swift */; };
 		45B0E14F26F4703D008E9CA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0E14E26F4703D008E9CA8 /* ViewController.swift */; };
 		45B0E15226F4703D008E9CA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B0E15026F4703D008E9CA8 /* Main.storyboard */; };
 		45B0E15426F4703D008E9CA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B0E15326F4703D008E9CA8 /* Assets.xcassets */; };
 		45B0E15726F4703D008E9CA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B0E15526F4703D008E9CA8 /* LaunchScreen.storyboard */; };
+		ACAE4D1226F4DDE8001FD641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,6 @@
 		4516FEE026F4D85B00A06E67 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -64,6 +63,7 @@
 		45B0E14926F4703D008E9CA8 /* katAndKard */ = {
 			isa = PBXGroup;
 			children = (
+				45B0E14A26F4703D008E9CA8 /* AppDelegate.swift */,
 				4516FEE026F4D85B00A06E67 /* SupportFiles */,
 				45B0E14C26F4703D008E9CA8 /* SceneDelegate.swift */,
 				45B0E14E26F4703D008E9CA8 /* ViewController.swift */,
@@ -145,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAE4D1226F4DDE8001FD641 /* AppDelegate.swift in Sources */,
 				45B0E14F26F4703D008E9CA8 /* ViewController.swift in Sources */,
-				45B0E14B26F4703D008E9CA8 /* AppDelegate.swift in Sources */,
 				45B0E14D26F4703D008E9CA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MWU56NQ296;
 				INFOPLIST_FILE = katAndKard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MWU56NQ296;
 				INFOPLIST_FILE = katAndKard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
