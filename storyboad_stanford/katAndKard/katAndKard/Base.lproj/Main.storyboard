@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -78,10 +77,10 @@
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="Lra-wk-8Gy" id="6F4-jW-voG"/>
+                        <outletCollection property="cardButons" destination="egc-zD-dJt" collectionClass="NSMutableArray" id="J8h-AP-6T8"/>
                         <outletCollection property="cardButtons" destination="dh7-qa-pui" collectionClass="NSMutableArray" id="Rlj-dF-NJW"/>
                         <outletCollection property="cardButtons" destination="iJF-Da-qTV" collectionClass="NSMutableArray" id="fEC-Oh-xEn"/>
                         <outletCollection property="cardButtons" destination="YqG-Ar-gAr" collectionClass="NSMutableArray" id="QQk-MZ-jOH"/>
-                        <outletCollection property="cardButtons" destination="egc-zD-dJt" collectionClass="NSMutableArray" id="nxa-tX-cHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
