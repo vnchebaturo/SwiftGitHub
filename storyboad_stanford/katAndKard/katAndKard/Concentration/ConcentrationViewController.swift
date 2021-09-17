@@ -7,17 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConcentrationViewController: UIViewController {
     
     lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     
-    var flipCount = 0 {
-        didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
-        }
+    var flipCount = 0 { didSet { updateFlipCountLabel()} }
+    
+    private func updateFlipCountLabel() {
+        let attributes: [NSAttributedString.Key:Any] = [ .strokeWidth : 5.0, .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) ]
+        let attributedString = NSAttributedString (string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLabel.attributedText = attributedString
     }
 
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel! { didSet { updateFlipCountLabel() }}
     
     @IBOutlet var cardButtons: [UIButton]!
    
@@ -27,11 +29,10 @@ class ViewController: UIViewController {
         flipCount += 1
         if let cardNumber = cardButtons.firstIndex(of: sender) {
             game.chooseCard(at: cardNumber)
-            // flipCard (withEmoji: emojiChoices[cardNumber], on: sender)
             updateViewFromModel()
-                } else {
-                    print("12431 ")
-                }
+                } //else {
+                //    print("12431 ")
+               // }
     }
     func updateViewFromModel() {
         for index in cardButtons.indices{
@@ -39,11 +40,11 @@ class ViewController: UIViewController {
             let card = game.cards[index]
             if card.isFaceUp {
                 button.setTitle(emoji(for: card), for: UIControl.State.normal)
-                button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                button.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             
             } else {
                 button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMatchd ? #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+                button.backgroundColor = card.isMatchd ? #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 0) : #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
             }
         }
     }
@@ -58,18 +59,25 @@ class ViewController: UIViewController {
             
         }
     }
-    
+//    var theme: String? {
+//        didSet {
+//            emojiChoices = theme ?? ""
+//            emoji = [:]
+//            updateViewFromModel()
+//        }
+//    }
+//
     var emojiChoices = ["🐥","🇦🇷" , "🇦🇹", "🧸", "💿"]
     
     
-    var emoji = [Int:String]()
+    var emoji = [Card:String]()
     
     func emoji (for card: Card) -> String {
-        if emoji [card.identifier] == nil, emojiChoices.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+        if emoji[card] == nil, emojiChoices.count > 0 {
+            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random)
+            emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
         }
-        return emoji [card.identifier] ?? "?"
+        return emoji [card] ?? "?"
     }
 }
 

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+<<<<<<< Updated upstream
 
 class MyCustomCell: UITableViewCell {
     let button = UIButton()
@@ -20,6 +21,12 @@ class MyCustomCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+=======
+//class FierstString:UITableViewCell{
+//    var label = UILabel()
+//    
+//}
+>>>>>>> Stashed changes
 
 
 
