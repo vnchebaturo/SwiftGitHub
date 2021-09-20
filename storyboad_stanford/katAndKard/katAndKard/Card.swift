@@ -12,9 +12,9 @@ struct Card {
     var isMatchd = false
     var identifier: Int
     
-    static var indentifierFatory = 0
+    private static var indentifierFatory = 0
     
-    static func getUniqueIdentifier() -> Int {
+    private static func getUniqueIdentifier() -> Int {
       indentifierFatory += 1
         return indentifierFatory
     }
